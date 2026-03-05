@@ -36,8 +36,8 @@
     }
 
     .logo-box {
-      width: 170px;
-      height: 170px;
+      width: 190px;
+      height: 190px;
       margin: 0 auto 18px;
       border-radius: 20px;
       background: linear-gradient(145deg, #ff00b7, #7b00ff);
@@ -46,12 +46,14 @@
       align-items: center;
       box-shadow: 0 0 20px rgba(255, 0, 183, 0.35);
       overflow: hidden;
+      padding: 4px;
     }
 
     .logo-box img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-radius: 16px;
     }
 
     h1 {
@@ -173,13 +175,18 @@
       .container {
         padding: 22px 16px;
       }
+
+      .logo-box {
+        width: 170px;
+        height: 170px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="logo-box">
-      <img src="https://via.placeholder.com/300x300.png?text=LVE+GANG+31+CBD" alt="Logo LVE GANG 31 CBD">
+      <img src="logo.jpg" alt="Logo LVE GANG 31 CBD">
     </div>
 
     <h1>LVE GANG 31 CBD</h1>
@@ -239,7 +246,7 @@
       const urlDeRedirection = "https://google.com";
 
       if (!code) {
-        message.textContent = "Merci d’entrer un code.";
+        message.textContent = "LVE31";
         return;
       }
 
