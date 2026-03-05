@@ -104,9 +104,9 @@
       overflow: hidden;
       border-radius: 22px;
       border: 2px solid rgba(255, 80, 210, 0.45);
-      min-height: 290px;
+      min-height: 340px;
       background:
-        linear-gradient(rgba(15,0,25,.35), rgba(15,0,25,.72)),
+        linear-gradient(rgba(15,0,25,.35), rgba(15,0,25,.78)),
         url("logo.jpg") center/cover no-repeat;
       display: flex;
       align-items: center;
@@ -117,7 +117,8 @@
     }
 
     .secure-content {
-      max-width: 290px;
+      max-width: 300px;
+      width: 100%;
     }
 
     .lock {
@@ -142,7 +143,7 @@
     }
 
     .secure-text {
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       font-weight: 700;
       line-height: 1.35;
       margin-bottom: 10px;
@@ -151,7 +152,45 @@
     .small {
       color: #f0dff2;
       line-height: 1.45;
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    .code-input {
+      width: 100%;
+      padding: 15px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 0, 183, 0.35);
+      outline: none;
+      background: rgba(255, 255, 255, 0.08);
+      color: white;
       font-size: 1rem;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .code-input::placeholder {
+      color: rgba(255,255,255,.6);
+    }
+
+    .enter-btn {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #ff00b7, #ff4fd8);
+      color: white;
+      font-size: 1.05rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(255, 0, 183, 0.35);
+    }
+
+    .message {
+      margin-top: 12px;
+      min-height: 22px;
+      color: #ffd2f3;
+      font-size: 0.95rem;
     }
 
     @media (max-width: 480px) {
@@ -206,13 +245,54 @@
         <div class="lock">🔒</div>
         <div class="secure-title">ACCÈS SÉCURISÉ</div>
         <div class="secure-text">
-          Contactez le support pour obtenir votre code d’accès.
+          Entrez votre code pour accéder au menu.
         </div>
         <div class="small">
-          Sans celui-ci, la connexion est limitée.
+          Sans code valide, la page suivante reste bloquée.
         </div>
+
+        <input
+          type="text"
+          id="codeMenu"
+          class="code-input"
+          placeholder="Entre le 2e code"
+        />
+
+        <button class="enter-btn" onclick="goToMenu()">ENTRER</button>
+
+        <div class="message" id="message"></div>
       </div>
     </div>
   </div>
+
+  <script>
+    const inputMenu = document.getElementById("codeMenu");
+
+    inputMenu.addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        goToMenu();
+      }
+    });
+
+    function goToMenu() {
+      const code = document.getElementById("codeMenu").value.trim().toUpperCase();
+      const message = document.getElementById("message");
+
+      const bonCodeMenu = "MENU31";
+      const urlMenu = "menu.html";
+
+      if (!code) {
+        message.textContent = "Merci d’entrer un code.";
+        return;
+      }
+
+      if (code !== bonCodeMenu) {
+        message.textContent = "Code incorrect.";
+        return;
+      }
+
+      window.location.href = urlMenu;
+    }
+  </script>
 </body>
 </html>
