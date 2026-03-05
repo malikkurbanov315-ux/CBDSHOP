@@ -223,12 +223,20 @@
   </div>
 
   <script>
+    const input = document.getElementById("codeInput");
+
+    input.addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        goToSite();
+      }
+    });
+
     function goToSite() {
-      const code = document.getElementById("codeInput").value.trim();
+      const code = document.getElementById("codeInput").value.trim().toUpperCase();
       const message = document.getElementById("message");
 
       const bonCode = "LVE31";
-      const urlDeRedirection = "https://tonsite.com";
+      const urlDeRedirection = "https://google.com";
 
       if (!code) {
         message.textContent = "Merci d’entrer un code.";
