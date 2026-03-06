@@ -18,9 +18,9 @@
     body {
       min-height: 100vh;
       background:
-        linear-gradient(rgba(20, 0, 30, 0.38), rgba(20, 0, 30, 0.48)),
-        url("médailleuse.png") center center / cover no-repeat,
-        radial-gradient(circle at top, #6b1b7d 0%, #1a0022 45%, #09000f 100%);
+        linear-gradient(rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.10)),
+        url("medailleuse.png") center center / cover no-repeat,
+        radial-gradient(circle at top, #8c5fa3 0%, #3d214d 45%, #140818 100%);
       color: white;
       display: flex;
       justify-content: center;
@@ -31,16 +31,16 @@
     .container {
       width: 100%;
       max-width: 430px;
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(255, 245, 250, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.35);
       border-radius: 24px;
       padding: 28px 22px;
       box-shadow:
-        0 0 30px rgba(255, 0, 170, 0.12),
-        inset 0 0 20px rgba(255, 255, 255, 0.05);
+        0 0 30px rgba(255, 255, 255, 0.14),
+        inset 0 0 20px rgba(255, 255, 255, 0.10);
       text-align: center;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
     }
 
     .logo-box {
@@ -48,15 +48,14 @@
       height: 190px;
       margin: 0 auto 18px;
       border-radius: 20px;
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.06));
+      background: rgba(255, 255, 255, 0.16);
       display: flex;
       justify-content: center;
       align-items: center;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.10);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.12);
       overflow: hidden;
       padding: 4px;
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.22);
     }
 
     .logo-box img {
@@ -68,24 +67,23 @@
 
     h1 {
       font-size: 2.1rem;
-      color: #fff;
+      color: #ffffff;
       margin-bottom: 10px;
-      text-shadow: 0 0 10px rgba(255, 0, 183, 0.25);
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.18);
       font-family: 'Cinzel Decorative', serif;
       letter-spacing: 1px;
       line-height: 1.2;
     }
 
     .subtitle {
-      color: #ffd6f4;
+      color: #fff0f8;
       font-weight: bold;
       margin-bottom: 18px;
       font-size: 1rem;
-      text-shadow: 0 0 8px rgba(255, 255, 255, 0.12);
     }
 
     .desc {
-      color: #f8f8f8;
+      color: #fffafc;
       line-height: 1.55;
       font-size: 0.98rem;
       margin-bottom: 20px;
@@ -95,23 +93,21 @@
       width: 70px;
       height: 3px;
       margin: 18px auto;
-      background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.85), transparent);
+      background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.95), transparent);
       border-radius: 99px;
     }
 
     .service-box {
-      border: 1px solid rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.22);
       border-radius: 16px;
       padding: 18px;
       text-align: left;
       margin-bottom: 22px;
-      background: rgba(255, 255, 255, 0.06);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
+      background: rgba(255, 255, 255, 0.10);
     }
 
     .service-box h3 {
-      color: #ffe1f7;
+      color: #fff3fa;
       margin-bottom: 10px;
       font-size: 1rem;
     }
@@ -131,11 +127,11 @@
       font-weight: 600;
       line-height: 1.5;
       margin-bottom: 18px;
-      color: #fdf2fb;
+      color: #fff7fb;
     }
 
     .direction {
-      color: #f3dff0;
+      color: #fff0f7;
       margin-bottom: 18px;
     }
 
@@ -143,20 +139,18 @@
       width: 100%;
       padding: 15px 16px;
       border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.24);
+      border: 1px solid rgba(255, 255, 255, 0.28);
       outline: none;
-      background: rgba(255, 255, 255, 0.10);
+      background: rgba(255, 255, 255, 0.14);
       color: white;
       font-size: 1rem;
       margin-bottom: 14px;
       text-align: center;
-      box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
+      box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.06);
     }
 
     .code-input::placeholder {
-      color: rgba(255, 255, 255, 0.70);
+      color: rgba(255, 255, 255, 0.82);
     }
 
     .enter-btn {
@@ -164,27 +158,25 @@
       padding: 16px;
       border: none;
       border-radius: 999px;
-      background: linear-gradient(90deg, rgba(255, 255, 255, 0.22), rgba(255, 192, 243, 0.28));
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.34), rgba(255, 220, 240, 0.42));
       color: white;
       font-size: 1.2rem;
       font-weight: bold;
       cursor: pointer;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.10);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.16);
       transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
     }
 
     .enter-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 0 26px rgba(255, 255, 255, 0.16);
-      background: linear-gradient(90deg, rgba(255, 255, 255, 0.28), rgba(255, 192, 243, 0.36));
+      box-shadow: 0 0 26px rgba(255, 255, 255, 0.24);
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.42), rgba(255, 220, 240, 0.52));
     }
 
     .message {
       margin-top: 12px;
       font-size: 0.92rem;
-      color: #ffe0f7;
+      color: #fff0f8;
       min-height: 20px;
     }
 
