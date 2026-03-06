@@ -3,45 +3,196 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Menu</title>
+  <title>Menu CBD</title>
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
       min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       background: radial-gradient(circle at top, #ff4fd8 0%, #7b00ff 35%, #14001d 100%);
       color: white;
-      font-family: Arial, Helvetica, sans-serif;
-      text-align: center;
       padding: 20px;
+      display: flex;
+      justify-content: center;
     }
 
-    .box {
-      max-width: 420px;
+    .wrap {
       width: 100%;
-      padding: 28px;
-      border-radius: 22px;
+      max-width: 430px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+      text-shadow: 0 0 12px rgba(255,255,255,.15);
+    }
+
+    .header p {
+      color: #ffd7f5;
+      font-size: 0.95rem;
+    }
+
+    .card {
       background: rgba(20, 0, 30, 0.72);
       border: 2px solid rgba(255, 80, 210, 0.45);
+      border-radius: 22px;
+      padding: 18px;
       box-shadow: 0 0 20px rgba(255, 0, 170, 0.25);
+      margin-bottom: 16px;
     }
 
-    h1 {
+    .section-title {
+      font-size: 1.2rem;
+      color: #ff88e7;
       margin-bottom: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    p {
-      opacity: 0.95;
+    .item {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .item:last-child {
+      border-bottom: none;
+    }
+
+    .item-left h3 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .item-left p {
+      font-size: 0.88rem;
+      color: #e9dff0;
+      line-height: 1.4;
+    }
+
+    .price {
+      white-space: nowrap;
+      font-weight: 800;
+      color: #fff;
+      align-self: center;
+    }
+
+    .note {
+      font-size: 0.85rem;
+      color: #f3dff3;
       line-height: 1.5;
+      text-align: center;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      margin-top: 14px;
+      padding: 15px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #ff00b7, #ff4fd8);
+      color: white;
+      font-weight: bold;
+      box-shadow: 0 0 20px rgba(255, 0, 183, 0.35);
     }
   </style>
 </head>
 <body>
-  <div class="box">
-    <h1>Bienvenue sur le menu</h1>
-    <p>Ici tu mettras ton vrai contenu plus tard.</p>
+  <div class="wrap">
+    <div class="header">
+      <h1>Menu CBD</h1>
+      <p>Catalogue vitrine — chanvre bien-être</p>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Fleurs CBD</div>
+
+      <div class="item">
+        <div class="item-left">
+          <h3>Amnesia CBD</h3>
+          <p>Profil aromatique citronné et floral.</p>
+        </div>
+        <div class="price">10€ / g</div>
+      </div>
+
+      <div class="item">
+        <div class="item-left">
+          <h3>OG Kush CBD</h3>
+          <p>Notes boisées et intenses.</p>
+        </div>
+        <div class="price">12€ / g</div>
+      </div>
+
+      <div class="item">
+        <div class="item-left">
+          <h3>Gelato CBD</h3>
+          <p>Arômes doux et gourmands.</p>
+        </div>
+        <div class="price">11€ / g</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Résines CBD</div>
+
+      <div class="item">
+        <div class="item-left">
+          <h3>Hash CBD Classic</h3>
+          <p>Texture souple, goût authentique.</p>
+        </div>
+        <div class="price">9€ / g</div>
+      </div>
+
+      <div class="item">
+        <div class="item-left">
+          <h3>Pollen CBD</h3>
+          <p>Saveur légère, profil doux.</p>
+        </div>
+        <div class="price">8€ / g</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Huiles CBD</div>
+
+      <div class="item">
+        <div class="item-left">
+          <h3>Huile CBD 10%</h3>
+          <p>Flacon bien-être usage conforme à la réglementation locale.</p>
+        </div>
+        <div class="price">29€</div>
+      </div>
+
+      <div class="item">
+        <div class="item-left">
+          <h3>Huile CBD 20%</h3>
+          <p>Version plus concentrée.</p>
+        </div>
+        <div class="price">49€</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="note">
+        Vérifie toujours la légalité locale, l’âge minimum requis et la conformité de tes produits avant mise en ligne.
+      </p>
+      <a href="#" class="btn">Nous contacter</a>
+    </div>
   </div>
 </body>
 </html>
