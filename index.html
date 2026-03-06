@@ -25,8 +25,8 @@
       position: relative;
       overflow-x: hidden;
       background:
-        linear-gradient(rgba(8, 10, 20, 0.45), rgba(8, 10, 20, 0.72)),
-        url("medailleuse.png") center center / cover no-repeat fixed;
+        linear-gradient(rgba(8, 10, 20, 0.12), rgba(8, 10, 20, 0.22)),
+        url("images/medailleuse.png") center center / cover no-repeat fixed;
     }
 
     body::before {
@@ -34,7 +34,271 @@
       position: fixed;
       inset: 0;
       background:
-        radial-gradient(circle at top left, rgba(255, 80, 180, 0.28), transparent 35%),
+        radial-gradient(circle at top left, rgba(255, 80, 180, 0.08), transparent 35%),
+        radial-gradient(circle at top right, rgba(120, 0, 255, 0.06), transparent 35%),
+        radial-gradient(circle at bottom center, rgba(255, 0, 170, 0.04), transparent 40%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 430px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      padding: 28px 22px;
+      box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      backdrop-filter: blur(7px);
+      -webkit-backdrop-filter: blur(7px);
+    }
+
+    .logo-box {
+      width: 190px;
+      height: 190px;
+      margin: 0 auto 18px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(255,255,255,0.14);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 20px rgba(255, 0, 183, 0.18);
+      overflow: hidden;
+      padding: 4px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .logo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      color: #fff;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+      font-family: 'Cinzel Decorative', serif;
+      letter-spacing: 1px;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      color: #ffd7f5;
+      font-weight: bold;
+      margin-bottom: 18px;
+      font-size: 1rem;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.25);
+    }
+
+    .desc {
+      color: #f1f1f1;
+      line-height: 1.55;
+      font-size: 0.98rem;
+      margin-bottom: 20px;
+    }
+
+    .separator {
+      width: 70px;
+      height: 3px;
+      margin: 18px auto;
+      background: linear-gradient(to right, transparent, #ffffff, transparent);
+      border-radius: 99px;
+    }
+
+    .service-box {
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 16px;
+      padding: 18px;
+      text-align: left;
+      margin-bottom: 22px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .service-box h3 {
+      color: #ffd7f7;
+      margin-bottom: 10px;
+      font-size: 1rem;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+
+    .service-box ul {
+      padding-left: 18px;
+      margin-bottom: 14px;
+      color: #ffffff;
+    }
+
+    .service-box li {
+      margin-bottom: 6px;
+    }
+
+    .footer-text {
+      font-style: italic;
+      font-weight: 600;
+      line-height: 1.5;
+      margin-bottom: 18px;
+      color: #f2f2f2;
+    }
+
+    .direction {
+      color: #e0e0e0;
+      margin-bottom: 18px;
+    }
+
+    .code-input {
+      width: 100%;
+      padding: 15px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      outline: none;
+      background: rgba(255, 255, 255, 0.08);
+      color: white;
+      font-size: 1rem;
+      margin-bottom: 14px;
+      text-align: center;
+      box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    .code-input::placeholder {
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    .enter-btn {
+      width: 100%;
+      padding: 16px;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(255, 0, 183, 0.20);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .enter-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 26px rgba(255, 0, 183, 0.35);
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .message {
+      margin-top: 12px;
+      font-size: 0.92rem;
+      color: #ffd0f2;
+      min-height: 20px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.7rem;
+      }
+
+      .container {
+        padding: 22px 16px;
+      }
+
+      .logo-box {
+        width: 170px;
+        height: 170px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo-box">
+      <img src="logo.jpg" alt="Logo LVE GANG CBD">
+    </div>
+
+    <h1>BIENVENUE CHEZ LVE GANG CBD</h1>
+    <p class="subtitle">La qualité, la quantité, le meilleur prix</p>
+
+    <p class="desc">
+      Depuis 2023 nous proposons une large gamme de produits en provenance des 4 coins du globe.
+    </p>
+
+    <div class="separator"></div>
+
+    <div class="service-box">
+      <h3>Service pour le 31 📍</h3>
+      <ul>
+        <li>Livraison</li>
+        <li>Meet-up</li>
+      </ul>
+
+      <h3>Service International 🌍</h3>
+      <ul>
+        <li>Envoi postal</li>
+      </ul>
+    </div>
+
+    <p class="footer-text">
+      Solide, structuré, efficace. LVE GANG CBD garantit un service premium, une expérience inoubliable.
+    </p>
+
+    <p class="direction">La direction ✍️</p>
+
+    <input
+      type="text"
+      id="codeInput"
+      class="code-input"
+      placeholder="Entre ton code ici"
+    />
+
+    <button class="enter-btn" onclick="goToSite()">ENTRER</button>
+
+    <div class="message" id="message"></div>
+  </div>
+
+  <script>
+    const input = document.getElementById("codeInput");
+
+    input.addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        goToSite();
+      }
+    });
+
+    function goToSite() {
+      const code = document.getElementById("codeInput").value.trim().toUpperCase();
+      const message = document.getElementById("message");
+
+      const bonCode = "LVE31";
+      const urlDeRedirection = "reseaux.html";
+
+      if (!code) {
+        message.textContent = "Entre le code d'accès.";
+        return;
+      }
+
+      if (code !== bonCode) {
+        message.textContent = "Code incorrect.";
+        return;
+      }
+
+      window.location.href = urlDeRedirection;
+    }
+  </script>
+</body>
+</html>        radial-gradient(circle at top left, rgba(255, 80, 180, 0.28), transparent 35%),
         radial-gradient(circle at top right, rgba(120, 0, 255, 0.25), transparent 35%),
         radial-gradient(circle at bottom center, rgba(255, 0, 170, 0.12), transparent 40%);
       pointer-events: none;
