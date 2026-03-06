@@ -21,7 +21,7 @@
         linear-gradient(rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.10)),
         url("medailleuse.png") center center / cover no-repeat,
         radial-gradient(circle at top, #8c5fa3 0%, #3d214d 45%, #140818 100%);
-      color: #111;
+      color: #f2d57a;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -67,23 +67,23 @@
 
     h1 {
       font-size: 2.1rem;
-      color: #111111;
+      color: #d4af37;
       margin-bottom: 10px;
-      text-shadow: 0 1px 4px rgba(255, 255, 255, 0.25);
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
       font-family: 'Cinzel Decorative', serif;
       letter-spacing: 1px;
       line-height: 1.2;
     }
 
     .subtitle {
-      color: #1f1f1f;
+      color: #d4af37;
       font-weight: bold;
       margin-bottom: 18px;
       font-size: 1rem;
     }
 
     .desc {
-      color: #181818;
+      color: #f2d57a;
       line-height: 1.55;
       font-size: 0.98rem;
       margin-bottom: 20px;
@@ -93,12 +93,12 @@
       width: 70px;
       height: 3px;
       margin: 18px auto;
-      background: linear-gradient(to right, transparent, rgba(40, 40, 40, 0.85), transparent);
+      background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.95), transparent);
       border-radius: 99px;
     }
 
     .service-box {
-      border: 1px solid rgba(0, 0, 0, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.25);
       border-radius: 16px;
       padding: 18px;
       text-align: left;
@@ -107,7 +107,7 @@
     }
 
     .service-box h3 {
-      color: #111111;
+      color: #d4af37;
       margin-bottom: 10px;
       font-size: 1rem;
     }
@@ -115,7 +115,7 @@
     .service-box ul {
       padding-left: 18px;
       margin-bottom: 14px;
-      color: #181818;
+      color: #f2d57a;
     }
 
     .service-box li {
@@ -127,11 +127,11 @@
       font-weight: 600;
       line-height: 1.5;
       margin-bottom: 18px;
-      color: #141414;
+      color: #f2d57a;
     }
 
     .direction {
-      color: #1a1a1a;
+      color: #d4af37;
       margin-bottom: 18px;
     }
 
@@ -140,19 +140,19 @@
       padding: 16px;
       border: none;
       border-radius: 999px;
-      background: linear-gradient(90deg, rgba(255, 255, 255, 0.42), rgba(255, 220, 240, 0.52));
-      color: #111111;
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.85), rgba(255, 223, 120, 0.95));
+      color: #2b1800;
       font-size: 1.2rem;
       font-weight: bold;
       cursor: pointer;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.16);
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.22);
       transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
     }
 
     .enter-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 0 26px rgba(255, 255, 255, 0.24);
-      background: linear-gradient(90deg, rgba(255, 255, 255, 0.50), rgba(255, 220, 240, 0.62));
+      box-shadow: 0 0 26px rgba(212, 175, 55, 0.34);
+      background: linear-gradient(90deg, rgba(224, 186, 64, 0.95), rgba(255, 231, 150, 1));
     }
 
     @media (max-width: 480px) {
@@ -205,7 +205,7 @@
 
     <p class="direction">La direction ✍️</p>
 
-    <button class="enter-btn" onclick="goToSite()">ENTRER</button>
+    <button type="button" class="enter-btn" onclick="goToSite()">ENTRER</button>
   </div>
 
   <script>
