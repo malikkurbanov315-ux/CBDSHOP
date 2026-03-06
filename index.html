@@ -17,25 +17,45 @@
 
     body {
       min-height: 100vh;
-      background: radial-gradient(circle at top, #4a0a5f 0%, #120018 45%, #07000d 100%);
       color: white;
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 20px;
+      position: relative;
+      overflow-x: hidden;
+      background:
+        linear-gradient(rgba(8, 10, 20, 0.45), rgba(8, 10, 20, 0.72)),
+        url("images/medailleuse.jpg") center center / cover no-repeat fixed;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at top left, rgba(255, 80, 180, 0.28), transparent 35%),
+        radial-gradient(circle at top right, rgba(120, 0, 255, 0.25), transparent 35%),
+        radial-gradient(circle at bottom center, rgba(255, 0, 170, 0.12), transparent 40%);
+      pointer-events: none;
+      z-index: 0;
     }
 
     .container {
       width: 100%;
       max-width: 430px;
-      background: rgba(10, 0, 20, 0.88);
-      border: 1px solid rgba(255, 0, 180, 0.18);
+      background: rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(255, 255, 255, 0.16);
       border-radius: 24px;
       padding: 28px 22px;
       box-shadow:
-        0 0 30px rgba(255, 0, 170, 0.2),
-        inset 0 0 20px rgba(255, 0, 170, 0.05);
+        0 10px 35px rgba(0, 0, 0, 0.30),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
       text-align: center;
+      position: relative;
+      z-index: 1;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
     }
 
     .logo-box {
@@ -43,13 +63,16 @@
       height: 190px;
       margin: 0 auto 18px;
       border-radius: 20px;
-      background: linear-gradient(145deg, #ff00b7, #7b00ff);
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255,255,255,0.18);
       display: flex;
       justify-content: center;
       align-items: center;
-      box-shadow: 0 0 20px rgba(255, 0, 183, 0.35);
+      box-shadow: 0 0 20px rgba(255, 0, 183, 0.25);
       overflow: hidden;
       padding: 4px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
 
     .logo-box img {
@@ -63,17 +86,18 @@
       font-size: 2.1rem;
       color: #fff;
       margin-bottom: 10px;
-      text-shadow: 0 0 10px rgba(255, 0, 183, 0.35);
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
       font-family: 'Cinzel Decorative', serif;
       letter-spacing: 1px;
       line-height: 1.2;
     }
 
     .subtitle {
-      color: #ff4fcf;
+      color: #ffd7f5;
       font-weight: bold;
       margin-bottom: 18px;
       font-size: 1rem;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.25);
     }
 
     .desc {
@@ -87,23 +111,26 @@
       width: 70px;
       height: 3px;
       margin: 18px auto;
-      background: linear-gradient(to right, transparent, #ff2ac3, transparent);
+      background: linear-gradient(to right, transparent, #ffffff, transparent);
       border-radius: 99px;
     }
 
     .service-box {
-      border: 1px solid rgba(255, 0, 183, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.16);
       border-radius: 16px;
       padding: 18px;
       text-align: left;
       margin-bottom: 22px;
-      background: rgba(255, 255, 255, 0.02);
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
     }
 
     .service-box h3 {
-      color: #ff67da;
+      color: #ffd7f7;
       margin-bottom: 10px;
       font-size: 1rem;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.25);
     }
 
     .service-box ul {
@@ -125,7 +152,7 @@
     }
 
     .direction {
-      color: #d9d9d9;
+      color: #e0e0e0;
       margin-bottom: 18px;
     }
 
@@ -133,44 +160,50 @@
       width: 100%;
       padding: 15px 16px;
       border-radius: 14px;
-      border: 1px solid rgba(255, 0, 183, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.22);
       outline: none;
-      background: rgba(255, 255, 255, 0.06);
+      background: rgba(255, 255, 255, 0.10);
       color: white;
       font-size: 1rem;
       margin-bottom: 14px;
       text-align: center;
-      box-shadow: inset 0 0 10px rgba(255, 0, 183, 0.08);
+      box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
 
     .code-input::placeholder {
-      color: rgba(255, 255, 255, 0.55);
+      color: rgba(255, 255, 255, 0.65);
     }
 
     .enter-btn {
       width: 100%;
       padding: 16px;
-      border: none;
+      border: 1px solid rgba(255,255,255,0.18);
       border-radius: 999px;
-      background: linear-gradient(90deg, #ff00b7, #ff4fd8);
+      background: rgba(255, 255, 255, 0.14);
       color: white;
       font-size: 1.2rem;
       font-weight: bold;
       cursor: pointer;
-      box-shadow: 0 0 20px rgba(255, 0, 183, 0.35);
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 0 20px rgba(255, 0, 183, 0.25);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
 
     .enter-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 0 26px rgba(255, 0, 183, 0.5);
+      box-shadow: 0 0 26px rgba(255, 0, 183, 0.4);
+      background: rgba(255, 255, 255, 0.20);
     }
 
     .message {
       margin-top: 12px;
       font-size: 0.92rem;
-      color: #ff9ae8;
+      color: #ffd0f2;
       min-height: 20px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.25);
     }
 
     @media (max-width: 480px) {
