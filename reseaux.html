@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nos réseaux</title>
+  <title>Nos contacts</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet" />
 
@@ -42,6 +42,7 @@
       color: #2b1800;
       font-weight: bold;
       cursor: pointer;
+      text-decoration: none;
       box-shadow: 0 0 20px rgba(212, 175, 55, 0.22);
       text-shadow:
         -1px -1px 0 rgba(0, 0, 0, 0.35),
@@ -94,6 +95,22 @@
       text-decoration: none;
       color: #f2d57a;
       text-align: center;
+      display: block;
+    }
+
+    .click-hint {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #fff4c2;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
     }
 
     .icon {
@@ -109,27 +126,36 @@
         inset 0 0 16px rgba(255,255,255,.08),
         0 0 15px rgba(212, 175, 55, 0.12);
       margin-bottom: 8px;
-      color: #d4af37;
+      color: #fff8dc;
       text-shadow:
         -1px -1px 0 #000,
          1px -1px 0 #000,
         -1px  1px 0 #000,
          1px  1px 0 #000;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+    }
+
+    .social:hover .icon {
+      transform: translateY(-3px);
+      box-shadow:
+        inset 0 0 16px rgba(255,255,255,.08),
+        0 0 22px rgba(255, 223, 120, 0.30);
+      filter: brightness(1.08);
     }
 
     .luffa {
-      background: linear-gradient(135deg, rgba(255,255,255,0.18), rgba(212,175,55,0.18));
+      background: linear-gradient(135deg, #6b4eff, #8c6bff);
     }
 
     .potato {
-      background: linear-gradient(135deg, rgba(255,255,255,0.14), rgba(212,175,55,0.22));
+      background: linear-gradient(135deg, #ff8a3d, #ffb347);
     }
 
     .tg {
-      background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(212,175,55,0.20));
+      background: linear-gradient(135deg, #1f9bff, #67c6ff);
     }
 
-    .social span {
+    .social-label {
       display: block;
       font-size: 0.95rem;
       font-weight: 700;
@@ -346,7 +372,7 @@
         font-size: 1.6rem;
       }
 
-      .social span {
+      .social-label {
         font-size: 0.85rem;
       }
 
@@ -358,35 +384,37 @@
 </head>
 <body>
   <div class="phone-wrap">
-    <button class="back-btn" onclick="window.location.href='index.html'">RETOUR</button>
+    <a class="back-btn" href="index.html">RETOUR</a>
 
     <div class="title">Retrouvez-nous sur</div>
 
     <div class="box">
       <div class="grid">
-        <a class="social" href="https://callup.luffa.im/c/HFWMxTk5XPi" target="_blank">
+        <a class="social" href="#" target="_blank" rel="noopener noreferrer">
+          <span class="click-hint">▼ Cliquez ici ▼</span>
           <div class="icon luffa">L</div>
-          <span>Luffa</span>
+          <span class="social-label">Luffa</span>
         </a>
 
-        <a class="social" href="https://tutuduanyu.org/LVEPRINCIPALE31" target="_blank">
+        <a class="social" href="#" target="_blank" rel="noopener noreferrer">
+          <span class="click-hint">▼ Cliquez ici ▼</span>
           <div class="icon potato">P</div>
-          <span>Potato</span>
+          <span class="social-label">Potato</span>
         </a>
 
-        <a class="social" href="https://t.me/lvegang3100" target="_blank">
+        <a class="social" href="#" target="_blank" rel="noopener noreferrer">
+          <span class="click-hint">▼ Cliquez ici ▼</span>
           <div class="icon tg">TG</div>
-          <span>Telegram</span>
+          <span class="social-label">Telegram</span>
         </a>
       </div>
 
       <p class="warning-text">
-        Tous nos liens officiels sont disponibles uniquement sur ce site. 🌐<br>
-        Si vous obtenez un lien par une autre source, nous ne pouvons ni en garantir la fiabilité ni en assumer la responsabilité. ⚠️<br>
-        Merci de passer uniquement par nos accès officiels. 🔒
+        Tous nos liens officiels sont disponibles uniquement sur ce site.<br>
+        Merci de passer uniquement par nos accès officiels.
       </p>
 
-      <a class="shipping-btn" href="envois.html">INFOS ENVOI POSTEAUX</a>
+      <a class="shipping-btn" href="envois.html">INFOS POSTALES</a>
     </div>
 
     <div class="separator">OU</div>
@@ -406,7 +434,7 @@
           type="text"
           id="codeMenu"
           class="code-input"
-          placeholder="Entre le 2e code"
+          placeholder="Entrez votre code"
         />
 
         <button class="enter-btn" onclick="goToMenu()">ENTRER</button>
@@ -429,7 +457,7 @@
       const code = document.getElementById("codeMenu").value.trim().toUpperCase();
       const message = document.getElementById("message");
 
-      const bonCodeMenu = "LVE31";
+      const bonCodeMenu = "DEMO";
       const urlMenu = "menu.html";
 
       if (!code) {
