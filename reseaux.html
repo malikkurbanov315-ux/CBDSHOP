@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -153,6 +153,32 @@
          1px -1px 0 #000,
         -1px  1px 0 #000,
          1px  1px 0 #000;
+    }
+
+    .shipping-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 16px;
+      padding: 14px 18px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.85), rgba(255, 223, 120, 0.95));
+      color: #2b1800;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.22);
+      text-shadow:
+        -1px -1px 0 rgba(0, 0, 0, 0.35),
+         1px -1px 0 rgba(0, 0, 0, 0.35),
+        -1px  1px 0 rgba(0, 0, 0, 0.35),
+         1px  1px 0 rgba(0, 0, 0, 0.35);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+
+    .shipping-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 26px rgba(212, 175, 55, 0.34);
+      background: linear-gradient(90deg, rgba(224, 186, 64, 0.95), rgba(255, 231, 150, 1));
     }
 
     .separator {
@@ -359,6 +385,8 @@
         Si vous obtenez un lien par une autre source, nous ne pouvons ni en garantir la fiabilité ni en assumer la responsabilité. ⚠️<br>
         Merci de passer uniquement par nos accès officiels. 🔒
       </p>
+
+      <a class="shipping-btn" href="envois.html">INFOS ENVOI</a>
     </div>
 
     <div class="separator">OU</div>
