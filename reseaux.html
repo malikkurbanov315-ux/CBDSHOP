@@ -4,9 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nos contacts</title>
-
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet" />
-
   <style>
     * {
       margin: 0;
@@ -32,27 +30,35 @@
       max-width: 430px;
     }
 
-    .back-btn {
+    .back-btn,
+    .shipping-btn,
+    .enter-btn {
       display: inline-block;
-      margin-bottom: 16px;
-      padding: 12px 18px;
+      width: 100%;
+      text-align: center;
+      margin-top: 16px;
+      padding: 14px 18px;
       border: none;
       border-radius: 999px;
       background: linear-gradient(90deg, rgba(212, 175, 55, 0.85), rgba(255, 223, 120, 0.95));
       color: #2b1800;
       font-weight: bold;
-      cursor: pointer;
       text-decoration: none;
+      cursor: pointer;
       box-shadow: 0 0 20px rgba(212, 175, 55, 0.22);
-      text-shadow:
-        -1px -1px 0 rgba(0, 0, 0, 0.35),
-         1px -1px 0 rgba(0, 0, 0, 0.35),
-        -1px  1px 0 rgba(0, 0, 0, 0.35),
-         1px  1px 0 rgba(0, 0, 0, 0.35);
       transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
     }
 
-    .back-btn:hover {
+    .back-btn {
+      width: auto;
+      margin-top: 0;
+      margin-bottom: 16px;
+      padding: 12px 18px;
+    }
+
+    .back-btn:hover,
+    .shipping-btn:hover,
+    .enter-btn:hover {
       transform: translateY(-2px);
       box-shadow: 0 0 26px rgba(212, 175, 55, 0.34);
       background: linear-gradient(90deg, rgba(224, 186, 64, 0.95), rgba(255, 231, 150, 1));
@@ -69,11 +75,11 @@
         -1px -1px 0 #000,
          1px -1px 0 #000,
         -1px  1px 0 #000,
-         1px  1px 0 #000,
-         0 2px 6px rgba(0, 0, 0, 0.45);
+         1px  1px 0 #000;
     }
 
-    .box {
+    .box,
+    .secure-card {
       background: rgba(255, 245, 250, 0.18);
       border: 1px solid rgba(255, 255, 255, 0.30);
       border-radius: 24px;
@@ -96,6 +102,8 @@
       color: #f2d57a;
       text-align: center;
       display: block;
+      position: relative;
+      z-index: 2;
     }
 
     .click-hint {
@@ -127,11 +135,6 @@
         0 0 15px rgba(212, 175, 55, 0.12);
       margin-bottom: 8px;
       color: #fff8dc;
-      text-shadow:
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
       transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
     }
 
@@ -143,17 +146,9 @@
       filter: brightness(1.08);
     }
 
-    .luffa {
-      background: linear-gradient(135deg, #6b4eff, #8c6bff);
-    }
-
-    .potato {
-      background: linear-gradient(135deg, #ff8a3d, #ffb347);
-    }
-
-    .tg {
-      background: linear-gradient(135deg, #1f9bff, #67c6ff);
-    }
+    .luffa { background: linear-gradient(135deg, #6b4eff, #8c6bff); }
+    .potato { background: linear-gradient(135deg, #ff8a3d, #ffb347); }
+    .tg { background: linear-gradient(135deg, #1f9bff, #67c6ff); }
 
     .social-label {
       display: block;
@@ -167,7 +162,10 @@
          1px  1px 0 #000;
     }
 
-    .warning-text {
+    .warning-text,
+    .secure-text,
+    .small,
+    .message {
       margin-top: 18px;
       text-align: center;
       line-height: 1.6;
@@ -181,32 +179,6 @@
          1px  1px 0 #000;
     }
 
-    .shipping-btn {
-      display: block;
-      width: 100%;
-      text-align: center;
-      margin-top: 16px;
-      padding: 14px 18px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, rgba(212, 175, 55, 0.85), rgba(255, 223, 120, 0.95));
-      color: #2b1800;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 0 20px rgba(212, 175, 55, 0.22);
-      text-shadow:
-        -1px -1px 0 rgba(0, 0, 0, 0.35),
-         1px -1px 0 rgba(0, 0, 0, 0.35),
-        -1px  1px 0 rgba(0, 0, 0, 0.35),
-         1px  1px 0 rgba(0, 0, 0, 0.35);
-      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-    }
-
-    .shipping-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 26px rgba(212, 175, 55, 0.34);
-      background: linear-gradient(90deg, rgba(224, 186, 64, 0.95), rgba(255, 231, 150, 1));
-    }
-
     .separator {
       display: flex;
       align-items: center;
@@ -215,11 +187,6 @@
       color: #d4af37;
       font-weight: 700;
       justify-content: center;
-      text-shadow:
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
     }
 
     .separator::before,
@@ -231,24 +198,14 @@
     }
 
     .secure-card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 24px;
-      border: 1px solid rgba(255, 255, 255, 0.30);
-      min-height: 340px;
+      text-align: center;
       background:
         linear-gradient(rgba(15, 0, 25, .40), rgba(15, 0, 25, .72)),
         url("logo.jpg") center/cover no-repeat;
+      min-height: 340px;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      padding: 24px;
-      box-shadow:
-        0 0 30px rgba(255, 255, 255, 0.10),
-        inset 0 0 20px rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
     }
 
     .secure-content {
@@ -265,7 +222,6 @@
       align-items: center;
       justify-content: center;
       background: rgba(212, 175, 55, 0.15);
-      border: 1px solid rgba(255,255,255,.2);
       font-size: 1.5rem;
     }
 
@@ -275,36 +231,6 @@
       letter-spacing: 2px;
       margin-bottom: 10px;
       font-size: 1.2rem;
-      text-shadow:
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
-    }
-
-    .secure-text {
-      font-size: 1.1rem;
-      font-weight: 700;
-      line-height: 1.35;
-      margin-bottom: 10px;
-      color: #f2d57a;
-      text-shadow:
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
-    }
-
-    .small {
-      color: #f2d57a;
-      line-height: 1.45;
-      font-size: 0.95rem;
-      margin-bottom: 16px;
-      text-shadow:
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
     }
 
     .code-input {
@@ -318,67 +244,13 @@
       font-size: 1rem;
       margin-bottom: 12px;
       text-align: center;
-      box-shadow: inset 0 0 10px rgba(255,255,255,0.05);
-    }
-
-    .code-input::placeholder {
-      color: rgba(255, 236, 179, 0.7);
-    }
-
-    .enter-btn {
-      width: 100%;
-      padding: 14px;
-      border: none;
-      border-radius: 999px;
-      background: linear-gradient(90deg, rgba(212, 175, 55, 0.85), rgba(255, 223, 120, 0.95));
-      color: #2b1800;
-      font-size: 1.05rem;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 0 20px rgba(212, 175, 55, 0.22);
-      text-shadow:
-        -1px -1px 0 rgba(0, 0, 0, 0.35),
-         1px -1px 0 rgba(0, 0, 0, 0.35),
-        -1px  1px 0 rgba(0, 0, 0, 0.35),
-         1px  1px 0 rgba(0, 0, 0, 0.35);
-      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-    }
-
-    .enter-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 26px rgba(212, 175, 55, 0.34);
-      background: linear-gradient(90deg, rgba(224, 186, 64, 0.95), rgba(255, 231, 150, 1));
-    }
-
-    .message {
-      margin-top: 12px;
-      min-height: 22px;
-      color: #f2d57a;
-      font-size: 0.95rem;
-      text-shadow:
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
     }
 
     @media (max-width: 480px) {
-      .title {
-        font-size: 1.7rem;
-      }
-
-      .icon {
-        height: 72px;
-        font-size: 1.6rem;
-      }
-
-      .social-label {
-        font-size: 0.85rem;
-      }
-
-      .warning-text {
-        font-size: 0.88rem;
-      }
+      .title { font-size: 1.7rem; }
+      .icon { height: 72px; font-size: 1.6rem; }
+      .social-label { font-size: 0.85rem; }
+      .warning-text { font-size: 0.88rem; }
     }
   </style>
 </head>
@@ -390,19 +262,19 @@
 
     <div class="box">
       <div class="grid">
-        <a class="social" href="#" target="_blank" rel="noopener noreferrer">
+        <a class="social" href="https://example.com" target="_blank" rel="noopener noreferrer">
           <span class="click-hint">▼ Cliquez ici ▼</span>
           <div class="icon luffa">L</div>
           <span class="social-label">Luffa</span>
         </a>
 
-        <a class="social" href="#" target="_blank" rel="noopener noreferrer">
+        <a class="social" href="https://example.com" target="_blank" rel="noopener noreferrer">
           <span class="click-hint">▼ Cliquez ici ▼</span>
           <div class="icon potato">P</div>
           <span class="social-label">Potato</span>
         </a>
 
-        <a class="social" href="#" target="_blank" rel="noopener noreferrer">
+        <a class="social" href="https://example.com" target="_blank" rel="noopener noreferrer">
           <span class="click-hint">▼ Cliquez ici ▼</span>
           <div class="icon tg">TG</div>
           <span class="social-label">Telegram</span>
@@ -410,8 +282,7 @@
       </div>
 
       <p class="warning-text">
-        Tous nos liens officiels sont disponibles uniquement sur ce site.<br>
-        Merci de passer uniquement par nos accès officiels.
+        Tous nos liens officiels sont disponibles uniquement sur ce site.
       </p>
 
       <a class="shipping-btn" href="envois.html">INFOS POSTALES</a>
@@ -423,22 +294,11 @@
       <div class="secure-content">
         <div class="lock">🔒</div>
         <div class="secure-title">ACCÈS SÉCURISÉ</div>
-        <div class="secure-text">
-          Entrez votre code pour accéder au menu.
-        </div>
-        <div class="small">
-          Sans code valide, la page suivante reste bloquée.
-        </div>
+        <div class="secure-text">Entrez votre code pour accéder au menu.</div>
+        <div class="small">Sans code valide, la page suivante reste bloquée.</div>
 
-        <input
-          type="text"
-          id="codeMenu"
-          class="code-input"
-          placeholder="Entrez votre code"
-        />
-
+        <input type="text" id="codeMenu" class="code-input" placeholder="Entrez votre code" />
         <button class="enter-btn" onclick="goToMenu()">ENTRER</button>
-
         <div class="message" id="message"></div>
       </div>
     </div>
