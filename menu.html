@@ -96,6 +96,32 @@
          1px  1px 0 #000;
     }
 
+    .other-products-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin: 0 0 20px;
+      padding: 14px 18px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.85), rgba(255, 223, 120, 0.95));
+      color: #2b1800;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.22);
+      text-shadow:
+        -1px -1px 0 rgba(0, 0, 0, 0.25),
+         1px -1px 0 rgba(0, 0, 0, 0.25),
+        -1px  1px 0 rgba(0, 0, 0, 0.25),
+         1px  1px 0 rgba(0, 0, 0, 0.25);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+
+    .other-products-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 26px rgba(212, 175, 55, 0.34);
+      background: linear-gradient(90deg, rgba(224, 186, 64, 0.95), rgba(255, 231, 150, 1));
+    }
+
     .card {
       background: rgba(255, 245, 250, 0.18);
       border: 1px solid rgba(255, 255, 255, 0.30);
@@ -183,16 +209,14 @@
 <body>
   <div class="wrap">
     <button type="button" class="back-btn" onclick="window.location.href='reseaux.html'">RETOUR</button>
-<div class="card">
-  ...
-</div>
 
     <div class="header">
       <h1>Menu CBD</h1>
       <p>Catalogue vitrine — chanvre bien-être</p>
     </div>
-    
-     <a class="other-products-btn" href="contact.html">NOUS CONTACTER</a>
+
+    <a class="other-products-btn" href="contact.html">NOUS CONTACTER</a>
+
     <div class="card">
       <div class="section-title">Résine de cannabis</div>
 
