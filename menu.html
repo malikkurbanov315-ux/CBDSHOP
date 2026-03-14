@@ -6,13 +6,14 @@
   <title>Menu CBD</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     }
 
     body {
@@ -40,14 +41,10 @@
       border-radius: 999px;
       background: linear-gradient(90deg, rgba(212, 175, 55, 0.85), rgba(255, 223, 120, 0.95));
       color: #2b1800;
-      font-weight: bold;
+      font-weight: 700;
       cursor: pointer;
       box-shadow: 0 0 20px rgba(212, 175, 55, 0.22);
-      text-shadow:
-        -1px -1px 0 rgba(0, 0, 0, 0.25),
-         1px -1px 0 rgba(0, 0, 0, 0.25),
-        -1px  1px 0 rgba(0, 0, 0, 0.25),
-         1px  1px 0 rgba(0, 0, 0, 0.25);
+      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.2);
       transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
     }
 
@@ -78,22 +75,14 @@
       font-family: 'Cinzel Decorative', serif;
       letter-spacing: 1px;
       line-height: 1.2;
-      text-shadow:
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000,
-         0 2px 6px rgba(0, 0, 0, 0.45);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
     }
 
     .header p {
-      color: #f2d57a;
+      color: #fff3c4;
       font-size: 0.95rem;
-      text-shadow:
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
+      font-weight: 500;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
     }
 
     .other-products-btn {
@@ -105,14 +94,10 @@
       border-radius: 999px;
       background: linear-gradient(90deg, rgba(212, 175, 55, 0.85), rgba(255, 223, 120, 0.95));
       color: #2b1800;
-      font-weight: bold;
+      font-weight: 700;
       text-decoration: none;
       box-shadow: 0 0 20px rgba(212, 175, 55, 0.22);
-      text-shadow:
-        -1px -1px 0 rgba(0, 0, 0, 0.25),
-         1px -1px 0 rgba(0, 0, 0, 0.25),
-        -1px  1px 0 rgba(0, 0, 0, 0.25),
-         1px  1px 0 rgba(0, 0, 0, 0.25);
+      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.2);
       transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
     }
 
@@ -142,11 +127,7 @@
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 1px;
-      text-shadow:
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
     }
 
     .item {
@@ -161,37 +142,29 @@
     .item-left h3 {
       font-size: 1rem;
       margin-bottom: 6px;
-      color: #d4af37;
-      text-shadow:
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
+      color: #f0c95a;
+      font-weight: 700;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
     }
 
     .item-left p {
-      font-size: 0.88rem;
-      color: #f2d57a;
-      line-height: 1.5;
-      text-shadow:
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
+      font-size: 0.95rem;
+      color: #fff4c7;
+      line-height: 1.7;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
     }
 
     .menu-note {
       margin-top: 14px;
       text-align: center;
       font-size: 0.9rem;
-      color: #f2d57a;
+      color: #fff0b3;
       font-style: italic;
-      line-height: 1.5;
-      text-shadow:
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
+      line-height: 1.6;
+      font-weight: 500;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
     }
 
     @media (max-width: 480px) {
@@ -202,6 +175,14 @@
       .card,
       .header {
         padding: 16px;
+      }
+
+      .item-left h3 {
+        font-size: 0.96rem;
+      }
+
+      .item-left p {
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -222,42 +203,42 @@
 
       <div class="item">
         <div class="item-left">
-          <h3>🧽 Jaune Crémeux  🧽 ✅</h3>
+          <h3>🧽 Jaune Crémeux 🧽 ⚡</h3>
           <p>5g : 20€ | 10g : 40€ | 25g : 90€ | 50g : 130€ | 100g : 250€</p>
         </div>
       </div>
 
       <div class="item">
         <div class="item-left">
-          <h3>🇪🇸 Filtré 73U  🇪🇸 ✅</h3>
+          <h3>🇪🇸 Filtré 73U 🇪🇸 ⚡</h3>
           <p>5g : 30€ | 10g : 50€ | 25g : 100€ | 50g : 180€ | 100g : 350€</p>
         </div>
       </div>
 
       <div class="item">
         <div class="item-left">
-          <h3>🇲🇦 Filtré 90U 🇲🇦 ✅</h3>
+          <h3>🇲🇦 Filtré 90U 🇲🇦 ⚡</h3>
           <p>5g : 40€ | 10g : 60€ | 25g : 120€ | 50g : 200€ | 100g : 380€</p>
         </div>
       </div>
 
       <div class="item">
         <div class="item-left">
-          <h3>🇺🇸 Frozen US Wolf Farmz 🇺🇸 ✅</h3>
+          <h3>🇺🇸 Frozen US Wolf Farmz 🇺🇸 ⚡</h3>
           <p>5g : 60€ | 10g : 100€ | 50g : 400€ | 100g : 750€</p>
         </div>
       </div>
 
       <div class="item">
         <div class="item-left">
-          <h3>🇺🇸 PIATELLA BLEU 🇺🇸 ✅</h3>
+          <h3>🇺🇸 PIATELLA BLEU 🇺🇸 ⚡</h3>
           <p>1g : 30€ | 2g : 60€ | 5g : 140€ | 50g : 1000€</p>
         </div>
       </div>
 
       <div class="item">
         <div class="item-left">
-          <h3>🇺🇸⚡ROSIN BLANC⚡🇺🇸 ✅</h3>
+          <h3>🇺🇸 Rosin Blanc 🇺🇸 ⚡</h3>
           <p>1g : 30€ | 2g : 60€ | 5g : 140€ | 10g : 250€</p>
         </div>
       </div>
@@ -272,28 +253,28 @@
 
       <div class="item">
         <div class="item-left">
-          <h3>🇪🇸 Amnesia G13 🇪🇸 ✅</h3>
+          <h3>🇪🇸 Amnesia G13 🇪🇸 ⚡</h3>
           <p>5g : 20€ | 10g : 40€ | 25g : 100€ | 50g : 180€ | 100g : 350€</p>
         </div>
       </div>
 
       <div class="item">
         <div class="item-left">
-          <h3>🇪🇸 Critical + 🇪🇸 ✅</h3>
+          <h3>🇪🇸 Critical + 🇪🇸 ⚡</h3>
           <p>5g : 20€ | 10g : 30€ | 25g : 80€ | 50g : 150€ | 100g : 300€</p>
         </div>
       </div>
 
       <div class="item">
         <div class="item-left">
-          <h3>🇪🇸 Cali Spain Oreoz 🇪🇸 ✅</h3>
+          <h3>🇪🇸 Cali Spain Oreoz 🇪🇸 ⚡</h3>
           <p>5g : 30€ | 10g : 60€ | 50g : 220€ | 100g : 420€</p>
         </div>
       </div>
 
       <div class="item">
         <div class="item-left">
-          <h3>🇺🇸 Cali US Ice Cream CBD 🇺🇸 ✅</h3>
+          <h3>🇺🇸 Cali US Ice Cream CBD 🇺🇸 ⚡</h3>
           <p>5g : 50€ | 10g : 90€ | 50g : 380€ | 100g : 700€</p>
         </div>
       </div>
